@@ -1,0 +1,4 @@
+Creating the list of students page
+
+
+1.Creating the students seed file.
