@@ -2,3 +2,7 @@ Creating the list of students page
 
 
 1.Creating the students seed file.
+2.Displaying the students in student list page.
+3.Adding new student.
+4.Display Error message.
+5.Display status message.
