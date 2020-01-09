@@ -10,7 +10,7 @@
         </button>
       </div>
       
-      <form action="{{ route('student.destroy', array('id'=>$student->id)) }}" method="post">
+      <form action="{{ route('students.destroy', array('id'=>$student->id)) }}" method="post">
          @csrf    
         <div class="modal-body">
             
