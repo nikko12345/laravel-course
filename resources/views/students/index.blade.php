@@ -17,6 +17,7 @@
             		<tr>
             			<th>#</th>
             			<th>Name</th>
+						<th>Year Level</th>
 						<th>Action</th>
             		</tr>
             	</thead>
@@ -25,6 +26,7 @@
             		  <tr>
             			  <td>{{ $loop->iteration }}</td>
             			  <td>{{ $student->first_name }} {{ $student->middle_name }} {{ $student->last_name }}</td>
+						  <td>{{ $student->year_level }}</td>
 						  <td>
 						        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit-student-modal-{{ $student->id}}">Edit</button>
 								@include('students.modals._edit-student-modal')
