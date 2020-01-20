@@ -9,9 +9,23 @@ use App\Attendance;
 
 class StudentController extends Controller
 {
-    public function index(){
-    	$students = student::all();
-    	return view('students.index',array('students'=> $students));
+    public function index(Request $request){
+		$year_level = 0;
+		if($request->year_level){
+			$year_level = $request->year_level;
+		}
+			$year_level = $request->year_level;
+		
+		
+		if($year_level){
+			$students = student::where('year_level','=',$year_level)->get();
+		}else{
+			$students = student::all();
+		}
+		
+		
+    
+    	return view('students.index',compact('students','year_level'));
     }
     public function addStudent(){
     	return view('students.add-student');

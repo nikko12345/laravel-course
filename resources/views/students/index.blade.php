@@ -11,7 +11,22 @@
 			<a href="{{ route('students.check_attendance') }}" class="btn btn-primary">Check Today's Attendance</a>
         
 			<a href="{{ route('students.attendance_report') }}" class="btn btn-primary">Attendance Report</a>
-        
+
+			
+			<form action="{{ route('students.index') }}" method="get">
+					<div class="form-group">
+				<label>Select year level:</label>
+				<select class="form-control mb-2" name=" year_level"/>
+						<option value="0">Select year_level</option>
+						<option value="1" @if($year_level ==1) select @endif>1</option>
+						<option value="2" @if($year_level ==2) select @endif>2</option>
+						<option value="3" @if($year_level ==3) select @endif>3</option>
+						<option value="4" @if($year_level ==4) select @endif>4</option>
+						<option value="5" @if($year_level ==5) select @endif>5</option>
+				</select>
+					<button type="submit" class="btn btn-primary">Filter</button>
+					</div>
+			</form>
 			<table class="table">
             	<thead>
             		<tr>
